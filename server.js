@@ -6,7 +6,7 @@ const parser = new Parser();
 const app = express();
 app.use(cors());
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 app.get('/rss', async (req, res) => {
