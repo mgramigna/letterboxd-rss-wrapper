@@ -6,12 +6,13 @@ const parser = new Parser();
 const app = express();
 app.use(cors());
 
+const port = process.env.port || 3000;
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 app.get('/rss', async (req, res) => {
   const user = req.query.user;
   if (!user) {
-    res.statusCode(400).json({
+    res.status(400).json({
       error: 'Parameter "user" is required'
     });
   }
@@ -20,4 +21,4 @@ app.get('/rss', async (req, res) => {
   res.json(feed.items);
 });
 
-app.listen(3000);
+app.listen(port);
