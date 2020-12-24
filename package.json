@@ -19,6 +19,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "letterboxd": "^2.0.0",
     "rss-parser": "^3.7.3"
   }
 }
